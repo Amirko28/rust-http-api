@@ -1,9 +1,11 @@
 use actix_web::{App, HttpServer, middleware};
 use routers::users::users_router;
 
+pub mod dal;
 pub mod routers;
 pub mod business_logic;
 pub mod model;
+pub mod data;
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
